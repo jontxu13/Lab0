@@ -27,7 +27,7 @@
 			<table class="table_Credits">
 				<tr><th colspan="2"><h2>DATOS DEL AUTOR/AUTORES</h2><br/></th ></tr>
 				<tr>
-					<td>Jon Da Silva Jaureguia</td>
+					<td>Jon Da Silva Jauregui</td>
 					<td>Iván Garoña Leza</td>
 				</tr>
 				<tr>
