@@ -63,15 +63,15 @@
           }
             $assessmentItems = simplexml_load_file('../xml/Questions.xml');
             $addAssessmentItem = $assessmentItems->addChild('assessmentItem');
-            $addAssessmentItem->addAttribute('subject', $_POST['tema']);
-            $addAssessmentItem->addAttribute('author', $_SESSION['session_username']);
-            $addItemBody = $addAssessmentItem->addChild('itemBody')->addChild('p', $enun);
+            $addAssessmentItem->addAttribute('subject', $tema);
+            $addAssessmentItem->addAttribute('author', $corr);
+            $addItemBody = $addAssessmentItem->addChild('itemBody')->addChild('p', $preg);
             $addResco = $addAssessmentItem->addChild('correctResponse');
-            $addResco->addChild('respose', $resco);
+            $addResco->addChild('respose', $corr);
             $addResin = $addAssessmentItem->addChild('incorrectResponse');
-            $addResin->addChild('response', $resin1);
-            $addResin->addChild('response', $resin2);
-            $addResin->addChild('response', $resin3);
+            $addResin->addChild('response', $incorr1);
+            $addResin->addChild('response', $incorr2);
+            $addResin->addChild('response', $incorr3);
             $xmlAdd = new SimpleXMLElement(formatXml($assessmentItems));
             $xmlAdd->asXML('../xml/Questions.xml');
             #$assessmentItems->asXML("../xml/Questions.xml");
