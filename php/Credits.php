@@ -33,7 +33,7 @@
 				<tr>
 					<td>Ingerería de Software</td>
 					<td>Ingerería de Software</td>
-				</tr >
+				</tr>
 				<tr>
 					<td><a href="mailto:jdasilva002@ikasle.ehu.es">jdasilva002@ikasle.ehu.eus</a></td>
 					<td><a href="mailto:igarona003@ikasle.ehu.es">igarona003@ikasle.ehu.eus</a></td>
