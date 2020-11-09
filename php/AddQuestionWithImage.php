@@ -81,7 +81,7 @@
           } else {
             // echo "<p class=\"success\">Pregunta guardada en la BD<p><br/>";
             // echo "<span><a href='ShowQuestionsWithImage.php'>Ver preguntas de la BD</a></span>";
-            echo "<script> alert(\"Pregunta guardada en la BD\"); document.location.href='QuestionFormWithImage.php?logInMail=$logInMail'; </script>";
+            echo "<script> alert(\"Pregunta guardada en la BD y XML\"); document.location.href='QuestionFormWithImage.php?logInMail=$logInMail'; </script>";
           }
           // Cerrar conexión
           mysqli_close($mysqli);
