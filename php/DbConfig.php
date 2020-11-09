@@ -8,8 +8,8 @@
     }
     else {
         $server="localhost";
-        $user="id15117638_admin";
-        $pass="***hidden***";
-        $basededatos="id15117638_quiz";
+        $user="id15003013_root";
+        $pass="qhZ&}8%hx6HB8}dh";
+        $basededatos="id15003013_quiz";
     }
 ?>
