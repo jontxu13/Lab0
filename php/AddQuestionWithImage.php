@@ -64,10 +64,10 @@
             $assessmentItems = simplexml_load_file('../xml/Questions.xml');
             $addAssessmentItem = $assessmentItems->addChild('assessmentItem');
             $addAssessmentItem->addAttribute('subject', $tema);
-            $addAssessmentItem->addAttribute('author', $corr);
+            $addAssessmentItem->addAttribute('author', $mail);
             $addItemBody = $addAssessmentItem->addChild('itemBody')->addChild('p', $preg);
             $addResco = $addAssessmentItem->addChild('correctResponse');
-            $addResco->addChild('respose', $corr);
+            $addResco->addChild('response', $corr);
             $addResin = $addAssessmentItem->addChild('incorrectResponse');
             $addResin->addChild('response', $incorr1);
             $addResin->addChild('response', $incorr2);

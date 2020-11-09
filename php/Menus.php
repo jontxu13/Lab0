@@ -28,6 +28,7 @@
       echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php?logInMail=$logInMail'> Creditos </a> </span>";
       echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
+      echo "<span id='verBD'> <a id='ver' href='ShowXmlQuestions.php?logInMail=$logInMail'> Ver preguntas XML </a> </span>";
       echo "<script> $(\"#h1\").append(\"<p>$logInMail</p>\"); </script>";
       //echo "<script> $(\"#h1\").append(\"<img/>\");";
       echo "<script> showOnLogIn(); </script>";
@@ -40,9 +41,10 @@
     }
 
     function getImagenDeBD(){
+      include '../php/DbConfig.php';
       $mysqli = mysqli_connect($server,$user,$pass,$basededatos);
       if(!$mysqli){
-          die("Error: ".mysqli_connect_error);
+          die("Error: ".mysqli_connect_error());
           echo "<span><a href='javascript:history.back()'>Volver</a></span>";
       }
       $sql = "SELECT imagen FROM usuarios WHERE email=\"".$logInMail."\";";
