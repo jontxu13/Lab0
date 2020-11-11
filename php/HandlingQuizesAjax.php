@@ -24,7 +24,6 @@
 	<?php include '../php/Menus.php' ?>
 	<section class="main" id="s1">
 		<div>
-
 			<!--Añadir el formulario y los scripts necesarios para que el usuario<br>pueda introducir los datos de una pregunta sin imagen.-->
 			<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’> POST porque envia imagen-->
 			<!--<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php'>-->
@@ -72,12 +71,14 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input type="submit" id="submit" value="Enviar"> <input type="reset" id="reset" value="Limpiar"></td>
+						<td><input type="button" id="enviar" value="Insertar pregunta"> <input type="button" id="showq" value="Ver preguntas"> <input type="reset" id="reset" value="Limpiar"></td>
 					</tr>
 				</table>
 			</form>
-
 		</div>
+        <div>
+
+        </div>
 	</section>
 	<?php include '../html/Footer.html' ?>
 </body>
