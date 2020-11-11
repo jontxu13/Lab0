@@ -59,7 +59,7 @@
           if(!empty($row) && $row['email']==$email && hash_equals($row['pass'], crypt($pass1, $row['pass']))){
             // echo "<p class=\"success\">Inicio de sesion realizado correctamente<p><br/>";
             // echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
-            echo "<script> alert(\"¡Bienvenido!\"); document.location.href='Layout.php?logInMail=$email'; </script>";
+            echo "<script> alert(\"¡Bienvenido $email!\"); document.location.href='Layout.php?logInMail=$email'; </script>";
 					} else {
             echo "<p class=\"error\">Usuario o contraseña incorrectos!<p><br/>";
             // echo "<span><a href=\"javascript:history.back()\">Volver</a></span>";
