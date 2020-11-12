@@ -71,14 +71,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td><input type="button" id="enviar" value="Insertar pregunta"> <input type="button" id="showq" value="Ver preguntas"> <input type="reset" id="reset" value="Limpiar"></td>
+						<td><input type="button" id="enviar" value="Insertar pregunta" onclick="showQuestionsAjax()"> <input type="button" id="showq" value="Ver preguntas"> <input type="reset" id="reset" value="Limpiar"></td>
 					</tr>
 				</table>
 			</form>
+			<script type="text/javascript" src="../js/ShowQuestionsAjax.js"></script>
 		</div>
-        <div>
-
-        </div>
+        <div id="txtHint"><b>Preguntas en XML</b></div>
 	</section>
 	<?php include '../html/Footer.html' ?>
 </body>
