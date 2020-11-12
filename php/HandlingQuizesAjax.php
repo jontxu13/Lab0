@@ -3,10 +3,12 @@
 
 <head>
 	<?php include '../html/Head.html' ?>
+	<?php include '../php/DbConfig.php' ?>
 	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/ShowImageInForm.js"></script>
 	<script src="../js/ShowQuestionsAjax.js"></script>
 	<script src="../js/AddQuestionsAjax.js"></script>
+	<script src="../js/countQuestions	.js"></script>
 	<!--<script src="../js/ValidateFieldsQuestion.js"></script>-->
 	<style>
 		.table_QuestionForm {
@@ -28,7 +30,7 @@
 			color: darkblue;
 		}
 
-		h3 {
+		.preguntas {
 			box-sizing: border-box;
 			width: 100%;
 			border: solid #000000 2px;
@@ -40,6 +42,7 @@
 <body>
 	<?php include '../php/Menus.php' ?>
 	<section class="main" id="s1">
+		<div class="preguntas" id="preguntas"></div>
 		<div>
 			<!--Añadir el formulario y los scripts necesarios para que el usuario<br>pueda introducir los datos de una pregunta sin imagen.-->
 			<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’> POST porque envia imagen-->
@@ -49,11 +52,6 @@
 				<tr>
 					<th>
 						<h2>Insertar pregunta</h2><br />
-					</th>
-				</tr>
-				<tr>
-					<th>
-						<h3> Mis preguntas/Todas las preguntas</h3><br />
 					</th>
 				</tr>
 				<tr>
@@ -97,11 +95,23 @@
 				</tr>
 			</table>
 			</form>
+			<?php
+		//Creamos la conexion con la BD.
+		$link = mysqli_connect($server, $user, $pass, $basededatos);
+		if (!$link) {
+			die("Fallo al conectar con la base de datos: " . mysqli_connect_error());
+		}
+		$query = "SELECT * FROM preguntas";
+		$cuantos = mysqli_num_rows(mysqli_query($link, $query));
+		mysqli_close($link);
+		?>
 		</div>
 		<div id="respuesta"></div>
 		<div id="txtHint"></div>
 	</section>
-
+	<script>
+			setInterval(updateQuestions(), 3000)
+	</script>
 	<?php include '../html/Footer.html' ?>
 </body>
 

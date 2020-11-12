@@ -31,4 +31,30 @@
       <response> Ninguna es correcta </response>
     </incorrectResponses>
   </assessmentItem>
+  <assessmentItem subject="test tema" author="jdasilva002@ikasle.ehu.eus">
+    <itemBody>
+      <p>test enunciado</p>
+    </itemBody>
+    <correctResponse>
+      <response>test correcta</response>
+    </correctResponse>
+    <incorrectResponse>
+      <response>test incor1</response>
+      <response>test incor2</response>
+      <response>test incor3</response>
+    </incorrectResponse>
+  </assessmentItem>
+  <assessmentItem subject="test tema" author="jdasilva002@ikasle.ehu.eus">
+    <itemBody>
+      <p>test enunciado</p>
+    </itemBody>
+    <correctResponse>
+      <response>test correcta</response>
+    </correctResponse>
+    <incorrectResponse>
+      <response>test incor1</response>
+      <response>test incor2</response>
+      <response>test incor3</response>
+    </incorrectResponse>
+  </assessmentItem>
 </assessmentItems>

@@ -4,7 +4,8 @@ $(document).ready(function () {
             type: $('#fquestion').attr('method'),
             url: $('#fquestion').attr('action'),
             data: $('#fquestion').serialize(),
-            success: function (data) { $("#respuesta").append("<p>Pregunta guardada en la BD y XML</p>"); },
+            success: function (data) { $("#respuesta").append("<p>Pregunta guardada en la BD y XML</p>");
+             },
             error: function (data) {
                 //Aqui va el error a tratar.
             }
