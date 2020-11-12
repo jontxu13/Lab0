@@ -1,6 +1,6 @@
+<?php header("Cache-Control: no-store"); ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<?php include '../html/Head.html' ?>
 	<?php include '../php/DbConfig.php' ?>
