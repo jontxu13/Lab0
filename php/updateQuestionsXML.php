@@ -1,4 +1,5 @@
 <?php
+header("Cache-Control: no-store");
           $questions = simplexml_load_file('../xml/Questions.xml');
           $cuantos = 0;
           foreach ($questions->xpath('//assessmentItem') as $question) {

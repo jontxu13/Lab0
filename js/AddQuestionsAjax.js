@@ -4,6 +4,7 @@ $(document).ready(function () {
             type: $('#fquestion').attr('method'),
             url: $('#fquestion').attr('action'),
             data: $('#fquestion').serialize(),
+            cache: false,
             success: function (data) { $("#respuesta").append("<p>Pregunta guardada en la BD y XML</p>");
              },
             error: function (data) {
