@@ -19,13 +19,20 @@
 			border-collapse: collapse;
 			text-align: center;
 		}
-		
+
 		sup {
 			color: red;
 		}
 
 		h2 {
 			color: darkblue;
+		}
+
+		h3 {
+			box-sizing: border-box;
+			width: 100%;
+			border: solid #000000 2px;
+			padding: 2px;
 		}
 	</style>
 </head>
@@ -42,6 +49,11 @@
 				<tr>
 					<th>
 						<h2>Insertar pregunta</h2><br />
+					</th>
+				</tr>
+				<tr>
+					<th>
+						<h3> Mis preguntas/Todas las preguntas</h3><br />
 					</th>
 				</tr>
 				<tr>
