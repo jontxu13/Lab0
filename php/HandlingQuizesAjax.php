@@ -6,6 +6,7 @@
 	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/ShowImageInForm.js"></script>
 	<script src="../js/ShowQuestionsAjax.js"></script>
+	<script src="../js/AddQuestionsAjax.js"></script>
 	<!--<script src="../js/ValidateFieldsQuestion.js"></script>-->
 	<style>
 		.table_QuestionForm {
@@ -13,6 +14,12 @@
 			text-align: center;
 		}
 
+		.table_Questions {
+			margin: auto;
+			border-collapse: collapse;
+			text-align: center;
+		}
+		
 		sup {
 			color: red;
 		}
@@ -74,14 +81,15 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="button" id="enviar" value="Insertar pregunta"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
+					<td><input type="button" id="enviar" value="Insertar pregunta" onclick="showQAjax()"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
 				</tr>
 			</table>
 			</form>
 		</div>
+		<div id="respuesta"></div>
 		<div id="txtHint"></div>
 	</section>
-	
+
 	<?php include '../html/Footer.html' ?>
 </body>
 

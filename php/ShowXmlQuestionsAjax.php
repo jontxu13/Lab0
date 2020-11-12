@@ -1,4 +1,4 @@
-      <?php
+<?php
           echo '<table border="1px" class="table_Questions"><tr><th>Email</th><th>Enunciado</th><th>Respuesta Correcta</tr>';
           $questions = simplexml_load_file('../xml/Questions.xml');
           foreach ($questions->xpath('//assessmentItem') as $question) {
