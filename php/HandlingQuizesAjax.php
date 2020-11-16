@@ -91,7 +91,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="button" id="enviar" value="Insertar pregunta" onclick="showQAjax()"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
+					<td><input type="button" id="enviar" value="Insertar pregunta"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
 				</tr>
 			</table>
 			</form>
@@ -110,9 +110,8 @@
 		<div id="txtHint"></div>
 	</section>
 	<script>
-			setInterval(updateQuestions(), 3000)
+			setInterval(function(){updateQuestions("<?php echo $logInMail?>");} , 3000);
 	</script>
 	<?php include '../html/Footer.html' ?>
 </body>
-
 </html>
