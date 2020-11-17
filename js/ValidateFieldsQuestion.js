@@ -32,7 +32,7 @@ function validarFormulario() {
 }
 
 $(document).ready(function () {
-    $('#submit').click(function () {
+    $('#enviar').click(function () {
         return validarFormulario();
     });
 });

@@ -1,16 +1,15 @@
 <?php header("Cache-Control: no-store"); ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<?php include '../html/Head.html' ?>
 	<?php include '../php/DbConfig.php' ?>
 	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/ShowImageInForm.js"></script>
-	<script src="../js/ShowQuestionsAjax.js"></script>
 	<script src="../js/AddQuestionsAjax.js"></script>
+	<script src="../js/ShowQuestionsAjax.js"></script>
 	<script src="../js/countQuestions.js"></script>
-	<!--<script src="../js/ValidateFieldsQuestion.js"></script>-->
+	<script src="../js/ValidateFieldsQuestion.js"></script>
 	<style>
 		.table_QuestionForm {
 			margin: auto;
@@ -92,31 +91,28 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="button" id="enviar" value="Insertar pregunta" onclick="addQAjax()"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
+					<td><input type="button" id="enviar" value="Insertar pregunta" onclick="addQuestionAjax()"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
 				</tr>
 			</table>
 			</form>
 			<?php
-			//Creamos la conexion con la BD.
-			$link = mysqli_connect($server, $user, $pass, $basededatos);
-			if (!$link) {
-				die("Fallo al conectar con la base de datos: " . mysqli_connect_error());
-			}
-			$query = "SELECT * FROM preguntas";
-			$cuantos = mysqli_num_rows(mysqli_query($link, $query));
-			mysqli_close($link);
-			?>
+		//Creamos la conexion con la BD.
+		$link = mysqli_connect($server, $user, $pass, $basededatos);
+		if (!$link) {
+			die("Fallo al conectar con la base de datos: " . mysqli_connect_error());
+		}
+		$query = "SELECT * FROM preguntas";
+		$cuantos = mysqli_num_rows(mysqli_query($link, $query));
+		mysqli_close($link);
+		?>
 		</div>
 		<div id="respuesta"></div>
 		<div id="txtHint"></div>
 	</section>
 	<script>
-		updateQuestions("<?php echo $logInMail ?>");
-		setInterval(function() {
-			updateQuestions("<?php echo $logInMail ?>");
-		}, 3000);
+		updateQuestions("<?php echo $logInMail?>");
+			setInterval(function(){updateQuestions("<?php echo $logInMail?>");} , 3000);
 	</script>
 	<?php include '../html/Footer.html' ?>
 </body>
-
 </html>
