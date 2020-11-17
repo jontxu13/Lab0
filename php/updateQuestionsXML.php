@@ -10,5 +10,5 @@ header("Cache-Control: no-store");
               $mios = $mios + 1;
             }
           }
-          echo $cuantos . "/" . $mios;
+          echo $mios . "/" . $cuantos;
 ?>
