@@ -92,7 +92,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="button" id="enviar" value="Insertar pregunta" onclick="addQuestionAjax()"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
+					<td><input type="button" id="enviar" value="Insertar pregunta" onclick="addQAjax()"> <input type="button" id="showq" value="Ver preguntas" onclick="showQAjax()"> <input type="reset" id="reset" value="Limpiar"></td>
 				</tr>
 			</table>
 			</form>

@@ -1,4 +1,4 @@
-function addQuestionAjax() {
+function addQAjax() {
     validarFormulario();
     if (validarFormulario()) {
         $.ajax({
