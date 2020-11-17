@@ -7,6 +7,7 @@
                 cache: false,
                 success: function (data) {
                     $("#respuesta").html("<p>Pregunta guardada en la BD y XML</p>");
+                    showQAjax();
                 }
             });
         }
