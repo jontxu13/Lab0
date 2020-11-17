@@ -111,7 +111,7 @@
 	</section>
 	<script>
 		updateQuestions("<?php echo $logInMail?>");
-			setInterval(function(){updateQuestions("<?php echo $logInMail?>");} , 3000);
+			setInterval(function(){updateQuestions("<?php echo $logInMail?>");} , 4000);
 	</script>
 	<?php include '../html/Footer.html' ?>
 </body>
