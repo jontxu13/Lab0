@@ -1,6 +1,6 @@
-<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="../php/VerifyPassWS.php?wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="../php/VerifyPassWS.php?wsdl">
+<definitions xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://localhost/sw20/php/VerifyPassWS.php?wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://localhost/sw20/php/VerifyPassWS.php?wsdl">
     <types>
-        <xsd:schema targetNamespace="../php/VerifyPassWS.php?wsdl">
+        <xsd:schema targetNamespace="http://localhost/sw20/php/VerifyPassWS.php?wsdl">
             <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
             <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
         </xsd:schema>
@@ -19,6 +19,6 @@
         </operation>
     </portType>
     <service name="verifyPass">
-        <soap:address location="../php/VerifyPassWS.php" />
+        <soap:address location="http://localhost/sw20/php/VerifyPassWS.php" />
     </service>
 </definitions>
