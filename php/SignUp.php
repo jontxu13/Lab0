@@ -49,7 +49,7 @@
                             </select>
                     </tr>
                     <tr>
-                        <td id="correo">Dirección de correo<sup>*</sup> <input type="email" size="75" id="dirCorreo" name="dirCorreo" onchange="verifyVIP()"></td>
+                        <td>Dirección de correo<sup>*</sup> <input type="email" size="75" id="dirCorreo" name="dirCorreo" onchange="verifyVIP()"></td>
                         <td id="vip"></td>
                     </tr>
                     <tr>
