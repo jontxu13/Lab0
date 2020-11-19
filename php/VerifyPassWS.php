@@ -3,7 +3,7 @@
 require_once('../lib/nusoap.php');
 require_once('../lib/class.wsdlcache.php');
 //creamos el objeto de tipo soap_server
-$ns = "http://localhost/sw20/php/VerifyPassWS.php?wsdl";
+$ns = "http://localhost/sw20/php/VerifyPassWS?wsdl";
 $server = new soap_server;
 $server->configureWSDL('verifyPass', $ns);
 $server->wsdl->schemaTargetNamespace = $ns;
@@ -22,16 +22,19 @@ function verifyPass($x, $y)
         while (!feof($dictionary)) {
             $linea = fgets($dictionary);
             if ($x == $linea) {
-                echo "INVALIDA";
+                return "INVALIDA";
             }
         }
         fclose($dictionary);
-        echo "VALIDA";
+        return "VALIDA";
     } else {
-        echo "SIN SERVICIO";
+        return "SIN SERVICIO";
     }
+    return "hola";
 }
 //llamamos al método service de la clase nusoap antes obtenemos los valores de los parámetros
-if (!isset($HTTP_RAW_POST_DATA)) $HTTP_RAW_POST_DATA = file_get_contents('php://input');
+if (!isset($HTTP_RAW_POST_DATA)){
+    $HTTP_RAW_POST_DATA = file_get_contents('php://input');
+} 
 $server->service($HTTP_RAW_POST_DATA);
 ?>

@@ -1,6 +1,5 @@
 function verifyVIP() {
     email = $('#dirCorreo').val();
-    if (isNaN(email)){
         $.ajax({
             type: "POST",
             url: 'ClientVerifyEnrollment.php',
@@ -14,5 +13,4 @@ function verifyVIP() {
                 }
             }
         });
-    }
 }
