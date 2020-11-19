@@ -3,7 +3,7 @@
 require_once('../lib/nusoap.php');
 require_once('../lib/class.wsdlcache.php');
 //creamos el objeto de tipo soap_server
-$ns = "http://localhost/sw20/php/VerifyPassWS?wsdl";
+$ns = "../php/VerifyPassWS?wsdl";
 $server = new soap_server;
 $server->configureWSDL('verifyPass', $ns);
 $server->wsdl->schemaTargetNamespace = $ns;
