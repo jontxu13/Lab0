@@ -5,7 +5,8 @@
     <?php include '../html/Head.html' ?>
     <script src="../js/jquery-3.4.1.min.js"></script>
     <script src="../js/ShowImageInForm.js"></script>
-    <script src="../js/ClientVerify.js"></script>
+    <script src="../js/ClientVerifyEmail.js"></script>
+    <script src="../js/ClientVerifyPass.js"></script>
     <style>
         .table_fregister {
             margin: auto;
@@ -56,7 +57,8 @@
                         <td>Nombre y apellido(s)<sup>*</sup> <input type="text" size="75" id="nAp" name="nAp"></td>
                     </tr>
                     <tr>
-                        <td>Contraseña (long>5)<sup>*</sup> <input type="password" size="75" id="pass1" name="pass1"></td>
+                        <td>Contraseña (long>5)<sup>*</sup> <input type="password" size="75" id="pass1" name="pass1" onchange="verifyPass()"></td>
+                        <td id="pass"></td>
                     </tr>
                     <tr>
                         <td>Repite la contraseña<sup>*</sup> <input type="password" size="75" id="pass2" name="pass2"></td>
