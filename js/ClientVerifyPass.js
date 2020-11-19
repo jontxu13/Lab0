@@ -1,6 +1,6 @@
 function verifyPass() {
     pass = $('#pass1').val();
-    if (isNaN(email)){
+    if (isNaN(pass)){
         $.ajax({
             type: "POST",
             url: 'ClientVerifyPass.php',
