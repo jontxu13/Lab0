@@ -27,6 +27,7 @@
       echo "<span id='inicio'><a id='ini' href='Layout.php?logInMail=$logInMail'>Inicio</a></span>";
       // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
       echo "<span id='insertarAjax'><a id='ins' href='HandlingQuizesAjax.php?logInMail=$logInMail'>Gestionar preguntas</a></span>";
+      echo "<span id='obtenerPregunta'><a id='ins' href='ClientGetQuestion.php?logInMail=$logInMail'>Optener pregunta</a></span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php?logInMail=$logInMail'> Creditos </a> </span>";
       // echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
       // echo "<span id='verBD'> <a id='ver' href='ShowXmlQuestions.php?logInMail=$logInMail'> Ver preguntas XML </a> </span>";
