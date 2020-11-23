@@ -18,14 +18,6 @@ function verifyPass($x, $y)
     if ($y == 1010) {
         $pagina = file_get_contents('../txt/toppasswords.txt');
         $encontrado = strpos($pagina, $x);
-        // $dictionary = fopen("../txt/toppasswords.txt", "r");
-        // while (!feof($dictionary)) {
-        //     $linea = fgets($dictionary);
-        //     if ($x == $linea) {
-        //         $encotrado=true;
-        //     }
-        // }
-        // fclose($dictionary);
         if ($encontrado) {
             return "INVALIDA";
         } else {
