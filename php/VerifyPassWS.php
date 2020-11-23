@@ -14,24 +14,29 @@ $server->register(
 //implementamos la función
 function verifyPass($x, $y)
 {
+    $encotrado = false;
     if ($y == 1010) {
-        $dictionary = fopen("../txt/toppasswords.txt", "r");
-        while (!feof($dictionary)) {
-            $linea = fgets($dictionary);
-            if ($x == $linea) {
-                return "INVALIDA";
-            }
+        $pagina = file_get_contents('../txt/toppasswords.txt');
+        $encontrado = strpos($pagina, $x);
+        // $dictionary = fopen("../txt/toppasswords.txt", "r");
+        // while (!feof($dictionary)) {
+        //     $linea = fgets($dictionary);
+        //     if ($x == $linea) {
+        //         $encotrado=true;
+        //     }
+        // }
+        // fclose($dictionary);
+        if ($encontrado) {
+            return "INVALIDA";
+        } else {
+            return "VALIDA";
         }
-        fclose($dictionary);
-        return "VALIDA";
     } else {
         return "SIN SERVICIO";
     }
-    return "hola";
 }
 //llamamos al método service de la clase nusoap antes obtenemos los valores de los parámetros
-if (!isset($HTTP_RAW_POST_DATA)){
+if (!isset($HTTP_RAW_POST_DATA)) {
     $HTTP_RAW_POST_DATA = file_get_contents('php://input');
-} 
+}
 $server->service($HTTP_RAW_POST_DATA);
-?>
