@@ -5,13 +5,11 @@ require_once('../lib/class.wsdlcache.php');
 //creamos el objeto de tipo soap_server
 $server = new soap_server;
 $server->configureWSDL('verifyPass', "urn:verifyPass");
-$server->wsdl->schemaTargetNamespace = $ns;
 //registramos la función que vamos a implementar
 $server->register(
     'verifyPass',
     array('x' => 'xsd:string', 'y' => 'xsd:int'),
-    array('z' => 'xsd:string'),
-    $ns
+    array('z' => 'xsd:string')
 );
 //implementamos la función
 function verifyPass($x, $y)
