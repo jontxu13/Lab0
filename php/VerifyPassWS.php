@@ -14,7 +14,6 @@ $server->register(
 //implementamos la función
 function verifyPass($x, $y)
 {
-    $encotrado = false;
     if ($y == 1010) {
         $pagina = file_get_contents('../txt/toppasswords.txt');
         $encontrado = strpos($pagina, $x);
