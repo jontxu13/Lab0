@@ -1,5 +1,11 @@
+<?php
+session_start();
+if(isset($_SESSION["usuario"])){
+// echo "La sesión está puesta"; // para testeo
+header("Location: Layout.php");
+}
+?>
 <html>
-
 <head>
   <?php include '../html/Head.html'?>
   <style>
@@ -59,7 +65,14 @@
           if(!empty($row) && $row['email']==$email && hash_equals($row['pass'], crypt($pass1, $row['pass']))){
             // echo "<p class=\"success\">Inicio de sesion realizado correctamente<p><br/>";
             // echo "<span><a href='Layout.php'>Ir al inicio</a></span>";
-            echo "<script> alert(\"¡Bienvenido $email!\"); document.location.href='Layout.php?logInMail=$email'; </script>";
+            if($row['estado']==1){
+            echo "<script> alert(\"¡Bienvenido $email!\"); document.location.href='Layout.php'; </script>";
+            $tipo=$row['tipousu']; 
+            $_SESSION['usuario']=$email;
+            $_SESSION['tipo']=$tipo;
+            }else{
+              echo "<p class=\"error\">Usuario bloqueado, consulte con un administrador.<p><br/>";
+            }
 					} else {
             echo "<p class=\"error\">Usuario o contraseña incorrectos!<p><br/>";
             // echo "<span><a href=\"javascript:history.back()\">Volver</a></span>";
@@ -70,5 +83,4 @@
   </section>
   <?php include '../html/Footer.html' ?>
 </body>
-
 </html>

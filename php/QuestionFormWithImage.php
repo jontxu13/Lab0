@@ -1,6 +1,11 @@
+<?php 
+session_start();
+if(!isset($_SESSION["usuario"])) {
+    header("location:LogIn.php");
+} else {
+?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<?php include '../html/Head.html' ?>
 	<script src="../js/jquery-3.4.1.min.js"></script>
@@ -19,7 +24,6 @@
         }
 	</style>
 </head>
-
 <body>
 	<?php include '../php/Menus.php' ?>
 	<section class="main" id="s1">
@@ -83,3 +87,6 @@
 </body>
 
 </html>
+<?php
+}
+?>

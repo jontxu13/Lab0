@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if(!isset($_SESSION["usuario"])) {
+    header("location:LogIn.php");
+} else {
+?>
 <?php header("Cache-Control: no-store"); ?>
 <!DOCTYPE html>
 <html>
@@ -116,3 +122,6 @@
 	<?php include '../html/Footer.html' ?>
 </body>
 </html>
+<?php
+}
+?>
