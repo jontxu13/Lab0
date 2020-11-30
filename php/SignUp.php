@@ -128,7 +128,7 @@
                         $imagen = "../images/anonimo.jpg";
                     }
                     $imagen_b64 = base64_encode(file_get_contents($imagen));
-                    $sql = "INSERT INTO usuarios(tipousu, email, nomap, pass, imagen) VALUES ('$tipo', '$mail', '$nAp', '$pass', '$imagen_b64');";
+                    $sql = "INSERT INTO usuarios(tipousu, email, nomap, pass, imagen, estado) VALUES ('$tipo', '$mail', '$nAp', '$pass', '$imagen_b64' , 1);";
                     if (!mysqli_query($mysqli, $sql)) {
                         die("Fallo al insertar en la BD: " . mysqli_error($mysqli));
                         echo "<span><a href='javascript:history.back()'>Volver al formulario</a></span>";
