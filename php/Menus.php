@@ -27,11 +27,10 @@
     echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
     echo "<script> showOnNotLogIn(); </script>";
 } else {
-    if($_SESSION["tipo"]==1||$_SESSION["tipo"]==2){
+    if($_SESSION["tipo"]==1){
       echo "<span id='inicio'><a id='ini' href='Layout.php'>Inicio</a></span>";
       // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
       echo "<span id='insertarAjax'><a id='ins' href='HandlingQuizesAjax.php'>Gestionar preguntas</a></span>";
-      echo "<span id='obtenerPregunta'><a id='ins' href='ClientGetQuestion.php'>Optener pregunta</a></span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
       // echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
       // echo "<span id='verBD'> <a id='ver' href='ShowXmlQuestions.php?logInMail=$logInMail'> Ver preguntas XML </a> </span>";
@@ -44,6 +43,17 @@
       echo "<span id='insertarAjax'><a id='ins' href='HandlingQuizesAjax.php'>Gestionar preguntas</a></span>";
       echo "<span id='obtenerPregunta'><a id='ins' href='ClientGetQuestion.php'>Optener pregunta</a></span>";
       echo "<span id='gestionUsuarios'><a id='gestion' href='HandlingAccounts.php'>Gestionar Usuarios</a></span>";
+      echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
+      // echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
+      // echo "<span id='verBD'> <a id='ver' href='ShowXmlQuestions.php?logInMail=$logInMail'> Ver preguntas XML </a> </span>";
+      echo "<script> $(\"#h1\").append(\"<p> " . $_SESSION['usuario'] . " </p>\"); </script>";
+      //echo "<script> $(\"#h1\").append(\"<img/>\");";
+      echo "<script> showOnLogIn(); </script>";
+    }else if($_SESSION["tipo"]==2){
+      echo "<span id='inicio'><a id='ini' href='Layout.php'>Inicio</a></span>";
+      // echo "<span id='insertar'><a id='ins' href='QuestionFormWithImage.php?logInMail=$logInMail'>Insertar pregunta</a></span>";
+      echo "<span id='insertarAjax'><a id='ins' href='HandlingQuizesAjax.php'>Gestionar preguntas</a></span>";
+      echo "<span id='obtenerPregunta'><a id='ins' href='ClientGetQuestion.php'>Optener pregunta</a></span>";
       echo "<span id='creditos'> <a id='cre' href='Credits.php'> Creditos </a> </span>";
       // echo "<span id='verBD'> <a id='ver' href='ShowQuestionsWithImage.php?logInMail=$logInMail'> Ver preguntas BD </a> </span>";
       // echo "<span id='verBD'> <a id='ver' href='ShowXmlQuestions.php?logInMail=$logInMail'> Ver preguntas XML </a> </span>";

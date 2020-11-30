@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION["usuario"]) || $_SESSION["tipo"]==1) {
+  header("location:LogIn.php");
+} else {
 //incluimos la clase nusoap.php
 require_once('../lib/nusoap.php');
 require_once('../lib/class.wsdlcache.php');
@@ -42,3 +46,4 @@ if (!isset($HTTP_RAW_POST_DATA)) {
     $HTTP_RAW_POST_DATA = file_get_contents('php://input');
 }
 $server->service($HTTP_RAW_POST_DATA);
+}
