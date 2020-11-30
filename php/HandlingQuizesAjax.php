@@ -53,7 +53,7 @@ if(!isset($_SESSION["usuario"])) {
 			<!--Añadir el formulario y los scripts necesarios para que el usuario<br>pueda introducir los datos de una pregunta sin imagen.-->
 			<!--<form id='fquestion' name='fquestion' action=’AddQuestion.php’> POST porque envia imagen-->
 			<!--<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php'>-->
-			<?php echo "<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php?logInMail=$logInMail'>"; ?>
+			<?php echo "<form id='fquestion' name='fquestion' method='POST' enctype='multipart/form-data' action='AddQuestionWithImage.php'>"; ?>
 			<table class="table_QuestionForm">
 				<tr>
 					<th>
@@ -61,7 +61,7 @@ if(!isset($_SESSION["usuario"])) {
 					</th>
 				</tr>
 				<tr>
-					<td>Direccion de correo<sup>*</sup> <input type="text" size="75" id="dirCorreo" name="Direccion de correo" value="<?php echo $logInMail; ?>" readonly></td>
+					<td>Direccion de correo<sup>*</sup> <input type="text" size="75" id="dirCorreo" name="Direccion de correo" value="<?php echo $_SESSION['usuario']; ?>" readonly></td>
 				</tr>
 				<tr>
 					<td>Enunciado de pregunta<sup>*</sup> <input type="text" size="75" id="pregunta" name="Pregunta"></td>
@@ -116,8 +116,8 @@ if(!isset($_SESSION["usuario"])) {
 		<div id="txtHint"></div>
 	</section>
 	<script>
-		updateQuestions("<?php echo $logInMail?>");
-			setInterval(function(){updateQuestions("<?php echo $logInMail?>");} , 4000);
+		updateQuestions("<?php echo $_SESSION['usuario']?>");
+			setInterval(function(){updateQuestions("<?php echo $_SESSION['usuario']?>");} , 4000);
 	</script>
 	<?php include '../html/Footer.html' ?>
 </body>
