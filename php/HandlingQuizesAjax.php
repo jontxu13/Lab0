@@ -10,6 +10,7 @@ if(!isset($_SESSION["usuario"])) {
 <head>
 	<?php include '../html/Head.html' ?>
 	<?php include '../php/DbConfig.php' ?>
+	<?php include '../php/antiSQL.php' ?>
 	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/ShowImageInForm.js"></script>
 	<script src="../js/AddQuestionsAjax.js"></script>

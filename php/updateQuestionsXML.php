@@ -1,7 +1,8 @@
 <?php
+include '../php/antiSQL.php';
 header("Cache-Control: no-store");
           $questions = simplexml_load_file('../xml/Questions.xml');
-          $logInMail = $_POST['logInMail'];
+          $logInMail = test_input($_POST['logInMail']);
           $cuantos = 0;
           $mios = 0;
           foreach ($questions->xpath('//assessmentItem') as $question) {

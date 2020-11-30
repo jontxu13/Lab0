@@ -14,6 +14,7 @@
 <body>
   <?php include '../php/Menus.php' ?>
   <?php include '../php/DbConfig.php' ?>
+  <?php include '../php/antiSQL.php' ?>
   <section class="main" id="s1">
     <div>
       <!--Código PHP para añadir una pregunta con imagen-->
@@ -22,14 +23,14 @@
         // Validacion como en ValidateFieldsQuestion.js
         $exprMail = "/((^[a-zA-Z]+(([0-9]{3})+@ikasle\.ehu\.(eus|es))$)|^[a-zA-Z]+(\.[a-zA-Z]+@ehu\.(eus|es)|@ehu\.(eus|es))$)/";
         $longPregunta = "/^.{10,}$/";
-        $mail = $_REQUEST['Direccion_de_correo'];
-        $preg = $_REQUEST['Pregunta'];
-        $corr = $_REQUEST['Respuesta_correcta'];
-        $incorr1 = $_REQUEST['Respuesta_incorrecta_1'];
-        $incorr2 = $_REQUEST['Respuesta_incorrecta_2'];
-        $incorr3 = $_REQUEST['Respuesta_incorrecta_3'];
-        $complejidad = $_REQUEST['complejidad'];
-        $tema = $_REQUEST['tema'];
+        $mail = test_input($_REQUEST['Direccion_de_correo']);
+        $preg = test_input($_REQUEST['Pregunta']);
+        $corr = test_input($_REQUEST['Respuesta_correcta']);
+        $incorr1 = test_input($_REQUEST['Respuesta_incorrecta_1']);
+        $incorr2 = test_input($_REQUEST['Respuesta_incorrecta_2']);
+        $incorr3 = test_input($_REQUEST['Respuesta_incorrecta_3']);
+        $complejidad = test_input($_REQUEST['complejidad']);
+        $tema = test_input($_REQUEST['tema']);
         $imagen = $_FILES['file']['tmp_name'];
 
         if(!isset($mail, $preg, $corr, $incorr1, $incorr2, $incorr3, $complejidad, $tema)) {

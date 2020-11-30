@@ -8,6 +8,7 @@ if(!isset($_SESSION["usuario"])) {
 <html>
 <head>
 	<?php include '../html/Head.html' ?>
+	<?php include '../php/antiSQL.php' ?>
 	<script src="../js/jquery-3.4.1.min.js"></script>
 	<script src="../js/ShowImageInForm.js"></script>
 	<!--<script src="../js/ValidateFieldsQuestion.js"></script>-->

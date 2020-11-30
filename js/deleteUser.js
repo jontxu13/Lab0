@@ -6,7 +6,7 @@ function deleteUser(email, tipo, id) {
         cache: false,
         success: function(resultado) {
             if(resultado=="error"){
-                alert("No te puedes bloquear a ti mismo!");
+                alert("No te puedes borrarte a ti mismo!");
             }
             if(resultado=="correcto"){
                 alert("Usuario borrado correctamente.");

@@ -30,9 +30,11 @@
         }
     </style>
 </head>
+
 <body>
     <?php include '../php/Menus.php' ?>
     <?php include '../php/DbConfig.php' ?>
+    <?php include '../php/antiSQL.php' ?>
     <section class="main" id="s1">
         <div>
             <form id="fregister" name="fregister" method="POST" enctype="multipart/form-data" action="SignUp.php">
@@ -83,11 +85,11 @@
                 $exprPass = "/^.{6,}$/";
                 $exprNAP = "/(\w.+\s).+/";
                 $tipo = $_REQUEST['tipoUsu'];
-                $mail = $_REQUEST['dirCorreo'];
-                $nAp = $_REQUEST['nAp'];
-                $pass1 = $_REQUEST['pass1'];
-                $pass2 = $_REQUEST['pass2'];
-                $imagen = $_FILES['file']['tmp_name'];
+                $mail = test_input($_REQUEST['dirCorreo']);
+                $nAp = test_input($_REQUEST['nAp']);
+                $pass1 = test_input($_REQUEST['pass1']);
+                $pass2 = test_input($_REQUEST['pass2']);
+                $imagen = test_input($_FILES['file']['tmp_name']);
                 /* debugger
                         echo $tipo, $mail, $nAp, $pass1, $pass2, $imagen;
                         if(!isset($tipo)) echo "tipo ";
